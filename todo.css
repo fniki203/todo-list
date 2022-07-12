@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+
+
+.navibar {
+    height: 50px;
+    background: rgba(0,0,0,0);    
+    width: 100%;
+    position: fixed;
+    z-index:12;
+}
+
+
+.banner-area {
+    width: 100%;
+    height: 250px;
+    position: fixed;
+    background-image: url("bg.jpg");
+    -webkit-background-size: 180%;
+    background-size: 180%;
+    background-position: 0% 72%;
+}
+
+#logout {
+    float: right;
+    position: fixed;
+    left: 93em;
+    font-size: 1vw;
+}
+
+.wrapper {
+    height: 500px;
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.todo-box {
+    height: 550px;
+    width: 600px;
+    position: relative;
+    left: 50%;
+    top: 78%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 5px 5px 5px 5px;
+    
+}
+
+.todo {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 70px;
+    color: white;
+}
+
+.pipa {
+    color: rgb(105, 105, 105);
+    transition: 0.2s;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#new {
+    width: 50%;
+    margin-top: 30px;
+    height: 60px;
+    margin-left: 44px;
+    border-color: rgb(199, 229, 255)
+}
+
+.add {
+    height: 60px;
+    width: 80px;
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+    outline: none;
+    border: none;
+    margin-top: 30px;
+    margin-right: 44px;
+    transition: 0.2s;
+}
+
+.add:hover {
+    background: #0363c9;
+    border-color: #0363c9;
+    
+}
+
+.items-text {
+    position: relative;
+    right: 39%;
+    margin-bottom:10px;
+    margin-top: 20px;
+}
+
+.items {
+    height: 350px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+}  
+
+.item {
+    background: white;
+    width: 84%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60px;
+    border: solid 1px rgb(189, 189, 189);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    transition: 0.2s;
+}
+
+.item:nth-of-type(1) {
+    margin-top: 2px;
+}
+
+.item:hover {
+    transform: translateY(-2px);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+
+.check {
+    height: 60px;
+    position: relative;
+    float: left;
+    width: 60px;
+    border-radius: 20px 0 0 20px;
+    border: solid 1px rgb(189, 189, 189);;
+    bottom: 1px;
+    right: 1px;
+    transition: 0.2s;
+}
+
+.check:hover {
+    background: rgb(168, 223, 168);
+}
+
+.check:hover > .pipa {
+    color: green;
+}
+
+.edit-icon {
+    color: rgb(57, 86, 137);
+    transition: 0.2s;
+}
+
+.edit-icon:hover {
+    color: rgb(170, 188, 220);
+    cursor: pointer;
+}
+
+.delete-icon {
+    color: red;
+    transition: 0.2s;
+}
+
+.delete-icon:hover {
+    color: rgb(182, 6, 6);
+    cursor: pointer;
+}
+
+.edit {
+    margin-top: 15px;
+    margin-right: 20px;
+    float:right;
+    width: 20px;
+    height: 20px;
+}
+
+.delete {
+    float:right;
+    margin-right: 20px;
+    margin-top: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+.item-content {
+    margin-top: 15px;
+    margin-left: 5px;
+    height: 35%;
+    width: 60%;
+    float: left;
+    border: none;
+}
+
+.outline-off:focus {
+    outline: none;
+}
+
+.list-type {
+    text-align: left;
+    margin-top: 5px;
+}
+
+.nav-element {
+    display: inline;
+    margin-right: 30px;
+}
+
+.nav-element:nth-of-type(1) {
+    margin-left: 60px;
+}
+
+.clear-all {
+    display: inline;
+    float: right;
+    margin-right: 40px;
+}
+
+.clear-all-btn {
+    border-radius: 15px;
+}
+
+.a {
+    color: black;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+@media (max-width: 900px) {
+    .todo-box {
+        height: 450px;
+        width: 500px;
+        position: absolute;
+        left: 50%;
+        top: 83%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .items {
+        height: 265px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: scroll;
+    }
+    .item {
+        height: 50px;
+    }
+    .check {
+        height: 50px;
+    }
+    .edit {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    .delete {
+        margin-top: 10px;
+        margin-right: 15px;
+    }
+    .bi {
+        width: 20px;
+        height: 20px;
+    }
+    .pipa {
+        margin-bottom: 5px;
+    }
+    .todo {
+        margin-top: 140px;
+        margin-left: 50px;
+    }
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #dcdbdc #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #dcdbdc;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+
+  .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -80px;
+  }
+
+  .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #007bff transparent transparent transparent;
+  }
+
+  .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+ .strikethrough {
+    opacity: 0.5;
+    transition: all 0.5s ease;
+ }
+
+ .strikethrough:after {
+    position: absolute;
+    left: 10%;
+    top: 45%;
+    height: 1px;
+    background: rgb(0, 0, 0);
+    content: "";
+    width: 80%;
+    display: block;
+    text-decoration: line-through;
+  }
+
+  .complete-btn {
+      pointer-events: none;
+  }
+
+  path {
+    pointer-events: none;
+  }
